@@ -1,0 +1,173 @@
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1;
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+}
+
+.navbar {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #007bff;
+}
+
+#mode-toggle {
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 24px;
+    margin-left: 20px;
+}
+
+.other-apks a {
+    text-decoration: none;
+}
+
+.contact a {
+    text-decoration: none;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+.dark-mode .header {
+    background-color: #444;
+}
+
+.dark-mode .navbar a {
+    color: white;
+}
+
+.dark-mode .navbar a:hover {
+    color: #007bff;
+}
+
+.dark-mode #mode-toggle {
+    color: white;
+}
+
+.dark-mode .footer {
+    background-color: #444;
+    color: white;
+}
+
+.dark-mode .footer a {
+    color: white;
+}
+
+.dark-mode .footer a:hover {
+    color: #007bff;
+}
+
+.dark-mode .other-apks {
+    color: white;
+}
+
+.dark-mode .other-apks a {
+    color: white;
+}
+
+.dark-mode .other-apks a:hover {
+    color: #007bff;
+}
+
+.dark-mode .contact {
+    color: white;
+}
+
+.dark-mode .contact a {
+    color: white;
+}
+
+.dark-mode .contact a:hover {
+    color: #007bff;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.logo-item a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.logo-item img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.logo-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.about {
+    max-width: 1300px;
+    margin: 0 auto 124px;
+}
+
+.about a {
+    text-decoration: none;
+}
+
+.title-about {
+    text-align: center;
+}
+
+.underline {
+    text-decoration: underline;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.note {
+    text-align: center;
+}
