@@ -1,4 +1,3 @@
-
 html, body {
     height: 100%;
     margin: 0;
@@ -9,6 +8,7 @@ body {
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 .main-content {
@@ -18,7 +18,7 @@ body {
 
 .header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     padding: 10px;
     background-color: #f1f1f1;
@@ -44,15 +44,6 @@ body {
     background: none;
     border: none;
     font-size: 24px;
-    margin-left: 20px;
-}
-
-.other-apks a {
-    text-decoration: none;
-}
-
-.contact a {
-    text-decoration: none;
 }
 
 .footer {
@@ -60,6 +51,7 @@ body {
     padding: 10px;
     background-color: #f1f1f1;
     color: black;
+    margin-top: auto;
 }
 
 .footer a {
@@ -170,4 +162,112 @@ body {
 
 .note {
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    .header {
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        background-color: #f1f1f1;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .navbar.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    #mode-toggle {
+        margin-left: auto;
+    }
+
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 10px;
+    }
+
+    .logo-item img {
+        max-width: 80px;
+    }
+
+    .about {
+        padding: 0 10px;
+    }
+
+    .footer {
+        padding: 20px;
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+
+    .dark-mode .hamburger span {
+        background-color: #fff;
+    }
+
+    .dark-mode .navbar {
+        background-color: #f1f1f1;
+    }
+
+    .dark-mode .navbar a {
+        color: #333;
+    }
+
+    .dark-mode .navbar a:hover {
+        color: #007bff;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
 }
