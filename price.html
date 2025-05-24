@@ -344,6 +344,12 @@
       </tr>
     </template>
 
+    <footer class="bg-gray-800 text-white text-center py-4 mt-10">
+      <p class="text-sm">&copy; <span id="current-year"></span>
+        <a href="/" target="_blank" rel="noopener noreferrer"
+          >Android Bypass Kit.</p>
+    </footer>
+
     <script>
       function toggleFeatures(row) {
         const nextRow = row.nextElementSibling;
@@ -359,9 +365,6 @@
         row.parentNode.insertBefore(clone, row.nextSibling);
       }
     </script>
-    <footer class="bg-gray-800 text-white text-center py-4 mt-10">
-      <p class="text-sm">&copy; 2025 Android Bypass Kit.</p>
-      <p class="text-xs mt-1">Dibuat dengan ❤️ untuk komunitas bypass iOS</p>
-    </footer>
+    <script src="js/year.js"></script>
   </body>
 </html>
